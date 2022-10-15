@@ -9,7 +9,7 @@ As part of our construct week for group project in Unit 6 at Masai School, we we
 
 **Original website link**: https://everhour.com/
 
-**Netlify link of our project**: https://everhour-clone.vercel.app/
+**Netlify link of our project**: https://everhour-clone-p0lwum856-aniket-bansal.vercel.app/
 
 ## Authors
 
