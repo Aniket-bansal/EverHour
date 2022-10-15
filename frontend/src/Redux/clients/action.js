@@ -33,7 +33,7 @@ export const getData = (url) => async (dispatch) => {
 
 export const postData = (Payload) => async (dispatch) => {
   try {
-    let res = await axios.post('http://localhost:8080/clients/', Payload);
+    let res = await axios.post('https://mighty-harbor-34908.herokuapp.com/clients/', Payload);
      console.log(res.data.data)
     dispatch({
       type: ADD_DATA_SUCCESS_C,
@@ -49,7 +49,7 @@ export const editData =
     console.log('paylaod', project);
     try {
       let res = await axios.patch(
-        `http://localhost:8080/clients/${id}`,
+        `https://mighty-harbor-34908.herokuapp.com/clients/${id}`,
         project
       );
       console.log('res', res.data);
@@ -63,7 +63,7 @@ export const editData =
 
 export const delData = (id) => async (dispatch) => {
   try {
-    let res = await axios.delete(`http://localhost:8080/clients/${id}`);
+    let res = await axios.delete(`https://mighty-harbor-34908.herokuapp.com/clients/${id}`);
     dispatch({
       type: DELETE_DATA_C,
     });

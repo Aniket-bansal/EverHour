@@ -5,7 +5,7 @@ export const Signup = (state) => (dispatch) => {
   dispatch({ type: types.SIGNUP_REQUEST });
   return (
     axios
-      .post("http://localhost:8080/user/signup", state)
+      .post("https://mighty-harbor-34908.herokuapp.com/user/signup", state)
 
      
       .then((r) => {
@@ -20,7 +20,7 @@ export const Signup = (state) => (dispatch) => {
 export const Login = (state) => (dispatch) => {
   dispatch({ type: types.LOGIN_REQUEST });
   return axios
-    .post("http://localhost:8080/user/login", state)
+    .post("https://mighty-harbor-34908.herokuapp.com/user/login", state)
 
     .then((r) => {
       
@@ -40,7 +40,7 @@ export const Login = (state) => (dispatch) => {
 
 export const GoogleOauth = (dispatch) => {
   return axios
-    .get("http://localhost:8080/user/auth/google")
+    .get("https://mighty-harbor-34908.herokuapp.com/user/auth/google")
     .then((r) => {
       dispatch({ type: types.SIGNUP_SUCCESS, payload: r.data.token });
     })
