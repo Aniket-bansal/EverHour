@@ -43,7 +43,7 @@ const Client = () => {
   }
 
   useEffect(() => {
-    dispatch(getData(`http://localhost:8080/clients/`));
+    dispatch(getData(`https://server-everhour.onrender.com/clients/`));
   }, [bool]);
 
   return (

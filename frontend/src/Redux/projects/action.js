@@ -33,7 +33,7 @@ export const getData = (url) => async (dispatch) => {
 
 export const postData = (Payload) => async (dispatch) => {
   try {
-    let res = await axios.post('https://mighty-harbor-34908.herokuapp.com/projects/', Payload);
+    let res = await axios.post('https://server-everhour.onrender.com/projects/', Payload);
     //  console.log(res.data.data)
     dispatch({
       type: ADD_DATA_SUCCESS_P,
@@ -48,7 +48,7 @@ export const editData =
   async (dispatch) => {
     try {
       let res = await axios.patch(
-        `https://mighty-harbor-34908.herokuapp.com/projects/${id}`,
+        `https://server-everhour.onrender.com/projects/${id}`,
         project
       );
       dispatch({
@@ -61,7 +61,7 @@ export const editData =
 
 export const delData = (id) => async (dispatch) => {
   try {
-    let res = await axios.delete(`https://mighty-harbor-34908.herokuapp.com/projects/${id}`);
+    let res = await axios.delete(`https://server-everhour.onrender.com/projects/${id}`);
     dispatch({
       type: DELETE_DATA_P,
     });

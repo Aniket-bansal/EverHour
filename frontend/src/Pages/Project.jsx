@@ -52,7 +52,7 @@ const Project = () => {
   }
 
   useEffect(() => {
-    dispatch(getData(`http://localhost:8080/projects/`));
+    dispatch(getData(`https://server-everhour.onrender.com/projects/`));
   }, [bool]);
 
   return (
