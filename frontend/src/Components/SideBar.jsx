@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
@@ -16,6 +16,7 @@ import { AiOutlineClockCircle, AiOutlineSetting } from "react-icons/ai";
 
 import styles from "./slidebar.module.css";
 import Client from "../Pages/Client";
+import { Button } from "@chakra-ui/react";
 // import { Navbar } from "../navbar/Navbar";
 // import clockify_logo from "../../assets/clockify-logo.svg";
 
@@ -26,12 +27,11 @@ const routes = [
     icon: <MdOutlineDashboardCustomize />,
   },
 
-
-  {
-    path: "/tracker",
-    name: "TIME",
-    icon: <AiOutlineClockCircle />,
-  },
+  // {
+  //   path: "/tracker",
+  //   name: "TIME",
+  //   icon: <AiOutlineClockCircle />,
+  // },
   {
     path: "/projects",
     name: "PROJECTS",
@@ -43,26 +43,17 @@ const routes = [
     icon: <IoIosContact />,
   },
   {
-    path: "/team",
+    path: "/clients",
     name: "TEAM",
     icon: <RiTeamLine />,
   },
-
-
-
-
-
-  {
-    path: "/reports",
-    name: "REPORTS",
-    icon: <GoGraph />,
+  // {
+  //   path: "/reports",
+  //   name: "REPORTS",
+  //   icon: <GoGraph />,
   
-  },
- 
- 
-
-
-  {
+  // },
+ {
     path: "/settings",
     name: "SETTINGS",
     icon: <AiOutlineSetting />,
@@ -73,7 +64,7 @@ const routes = [
  export const SideBar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-
+  const nav = useNavigate()
   const showAnimation = {
     hidden: {
       width: 0,
@@ -101,6 +92,10 @@ const routes = [
 
         <div>
           {/* <Navbar /> */}
+          <Button onClick={()=>{
+           localStorage.clear()
+           nav('/')
+          }}>Sign Out</Button>
         </div>
       </div>
 

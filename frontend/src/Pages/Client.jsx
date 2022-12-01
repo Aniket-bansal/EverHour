@@ -176,7 +176,7 @@ const Client = () => {
                 clientData.map((el, i) => (
                   <Tr key={i}>
                     <Td>{el.Client_name}</Td>
-                    <Td>{el.Projects[0].split(',')[1]}</Td>
+                    <Td>{el.Projects[0]}</Td>
                     {el.Discount == undefined || el.Discount == null ? (
                       <Td isNumeric pr='250px'>
                         No budget

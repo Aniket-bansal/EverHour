@@ -189,7 +189,7 @@ const Project = () => {
                     <Td>{el.privacy}</Td>
                     <Td>{el.manage}</Td>
                 
-                    <Td>{el.clientId[0].split(',')[1]}</Td>
+                    <Td>{el.clientId[0]}</Td>
                     <Td>
                       <Flex>
                         <DeleteIcon

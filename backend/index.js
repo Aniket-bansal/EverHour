@@ -24,7 +24,7 @@ const port = process.env.PORT || 8000;
 app.listen(port, async () => {
   try {
     await connection();
-    console.log('connected ...');
+    console.log(`connected to ${port}`);
   } catch (error) {
     console.log(error);
   }
